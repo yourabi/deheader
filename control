@@ -1,0 +1,18 @@
+# This is not a real Debian control file
+# It's project metadata for the shipper tool
+
+Package: deheader
+
+Description: find (optionally remove) unneeded includes in C or C++ sourcefiles
+ deheader analyzes C and C++ files to determine which header inclusions can be
+ removed while still allowing them to compile.  This may result in substantial
+ improvements in compilation time, especially on large C++ projects; it also
+ sometimes exposes dependencies and cohesions of which developers were unaware.
+
+XBS-Destinations: freshmeat
+
+Homepage: http://www.catb.org/~esr/deheader
+
+XBS-Logo: deheader-logo.png
+
+XBS-Project-Tag-List: development tools, optimization, C, C++
