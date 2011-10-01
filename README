@@ -7,3 +7,6 @@ sometime exposes dependencies and cohesions of which developers were unaware.
 
 	 	 	     	 	      Eric S. Raymond
 					      December 2010
+
+Note: 
+The canonical source for dehader is on http://catb.org/~esr/deheader/ . This is a git(hub) mirror (maybe with packaging)
