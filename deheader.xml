@@ -151,7 +151,7 @@ stndardized or only weakly standardized.  The sockets API
 (sys/select.h, sys/sockets.h, and friends such as sys/types.h and
 sys.stat.h) is perhaps the most serious trouble
 spot. <command>deheader</command> has an internal table of rules that
-heads off the most common problems by, suppressing deletion of headers
+heads off the most common problems by suppressing deletion of headers
 that are required for portability, but your mileage may vary.</para>
 
 <para>Sufficiently perverse C++ can silently invalidate the simple

@@ -35,7 +35,7 @@ BATON_DEBUG    = 1
 PROGRESS_DEBUG = 2
 COMMAND_DEBUG  = 3
 
-version = "0.6"
+version = "0.7"
 
 # Difference in various compiler implementations and OSes mean that for cross-
 # platform compatibility you sometimes want to leave "unneeded" headers alone
@@ -1225,7 +1225,7 @@ class InclusionMap:
     @staticmethod
     def c_source(filename):
         "Predicate: return true if the filename appears to be C or C++ source."
-        return filename.endswith(".c") or filename.endswith(".cpp")
+        return filename.endswith(".c") or filename.endswith(".cpp") or filename.endswith(".cc")
     def __init__(self, roots, ignore, excludes, verbosity):
         "Build the initial inclusion map."
         self.verbosity = verbosity
@@ -1416,7 +1416,7 @@ def deheader(sourcefile, maker, includes, requires, remove, verbose):
     (st, t) = testcompile(sourcefile, maker, verbosity=max(1, verbose), showerrs=True)
     if st == 0:
         # Now do the analysis
-        if sourcefile.endswith(".c") or sourcefile.endswith(".cpp"):
+        if sourcefile.endswith(".c") or sourcefile.endswith(".cpp") or sourcefile.endswith(".cc"):
             unneeded = c_analyze(sourcefile, maker,
                                  includes[:], requires, verbose)
         if unneeded:
